@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=5">
+		<title>Peta Sebaran Covid19 Tangerang Selatan</title>
+
+		<link rel="stylesheet" type="text/css" href="javascript/style.css" />
+		<link rel="stylesheet" type="text/css" href="leaflet/leaflet.css"/>
+
+		<script type="text/javascript" src="leaflet/leaflet.js"></script>
+		<script type="text/javascript" src="javascript/tab.js"></script>
+
+		<!-- Caminhos paras os dados das camadas -->
+		<script type="text/javascript" src="data/_Jalan.js"></script>
+		<script type="text/javascript" src="data/_Meninggal.js"></script>
+		<script type="text/javascript" src="data/_ODP.js"></script>
+		<script type="text/javascript" src="data/_PDP.js"></script>
+		<script type="text/javascript" src="data/_Positif.js"></script>
+		<script type="text/javascript" src="data/_Sungai.js"></script>
+		<script type="text/javascript" src="data/_Kelurahan_Tangerang_Selatan.js"></script>
+	</head>
+	<body>
+		<div class="title">
+			<h1><img src="Logo Tangerang Selatan.png" width="120" height="120">
+			<marquee>Peta Sebaran Covid19 Tangerang Selatan</marquee></h1>
+		</div>
+		<div class="maintab">
+			<button id="mapBtn" class="mainTablinks" onclick="openMainTab(event, 'mapArea')">Peta</button>
+			<button class="mainTablinks" onclick="openMainTab(event, 'attributesArea')">Attribute Table</button>
+		</div>
+		<div id="mapArea" class="mainTabContent">
+			<div id="map"></div>
+		</div>
+
+		<div id="attributesArea" class="mainTabContent">
+			<div class="tab">
+				<button id="_Jalan_btn" class="tablinks" onclick="openTab(event, '_Jalan_tab')">Jalan</button>
+				<button id="_Meninggal_btn" class="tablinks" onclick="openTab(event, '_Meninggal_tab')">Meninggal</button>
+				<button id="_ODP_btn" class="tablinks" onclick="openTab(event, '_ODP_tab')">ODP</button>
+				<button id="_PDP_btn" class="tablinks" onclick="openTab(event, '_PDP_tab')">PDP</button>
+				<button id="_Positif_btn" class="tablinks" onclick="openTab(event, '_Positif_tab')">Positif</button>
+				<button id="_Sungai_btn" class="tablinks" onclick="openTab(event, '_Sungai_tab')">Sungai</button>
+				<button id="_Kelurahan_Tangerang_Selatan_btn" class="tablinks" onclick="openTab(event, '_Kelurahan_Tangerang_Selatan_tab')">Kelurahan Tangerang Selatan</button>
+			</div>
+			<div id="_Jalan_tab" class="tabcontent"></div>
+			<div id="_Meninggal_tab" class="tabcontent"></div>
+			<div id="_ODP_tab" class="tabcontent"></div>
+			<div id="_PDP_tab" class="tabcontent"></div>
+			<div id="_Positif_tab" class="tabcontent"></div>
+			<div id="_Sungai_tab" class="tabcontent"></div>
+			<div id="_Kelurahan_Tangerang_Selatan_tab" class="tabcontent"></div>
+		</div>
+		<script type="text/javascript" src="javascript/map.js"></script>
+		<script type="text/javascript" src="javascript/attributes.js"></script>
+		<script>document.getElementById('mapBtn').click();</script>	</body>
+		
+</html>
